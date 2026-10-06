@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #1a365d;
+  background-color: #ffffff;
+}
+
+.site-header,
+main,
+.site-footer {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.site-header {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #c9a227;
+  background-color: #0b2a4a;
+  color: #ffffff;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.site-header h1,
+.site-header .tagline {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #e8d48b;
+}
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #ffffff;
+}
+
+section {
+  margin-bottom: 2.25rem;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  color: #0b2a4a;
+  border-bottom: 2px solid #c9a227;
+  padding-bottom: 0.35rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.skills ul,
+.projects ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.skills li,
+.projects li {
+  margin-bottom: 0.5rem;
+}
+
+.projects li p {
+  margin: 0.25rem 0 0.75rem;
+  color: #2c5282;
+}
+
+a {
+  color: #1a4a8a;
+  text-decoration: underline;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+
+a:hover,
+a:focus {
+  color: #b8860b;
+}
+
+.site-footer {
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+  border-top: 3px solid #c9a227;
+  font-size: 0.95rem;
+  color: #e8d48b;
+  background-color: #0b2a4a;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.site-footer p {
+  margin: 0;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
