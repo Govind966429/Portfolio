@@ -5,27 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Govind saran — Personal Profile</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
   <header class="site-header">
     <h1>Govind saran</h1>
     <p class="tagline">I am am student at JECRC </p>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Switch to Dark Mode</button>
   </header>
 
   <main>
-    <section class="about" aria-labelledby="about-heading">
+    <section id="about" class="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About</h2>
-      <p>
-        PLACEHOLDER: Write a short introduction about yourself. Include who you are,
-        what you do, and what you are interested in. Replace this entire paragraph.
-      </p>
-      <p>
-        PLACEHOLDER: Add a second paragraph if you want more detail about your
-        background, education, or goals.
-      </p>
+      <div class="about-layout">
+        <img
+          class="profile-image"
+          src="image\Profile.jpeg"
+          alt="PLACEHOLDER: Add a profile photo at images/profile-placeholder.jpg"
+        />
+        <div class="about-copy">
+          <p>
+            I am a Computer Science Engineering student at JECRC University with a strong interest in programming, problem-solving, and software development. I have a foundation in C and am currently expanding my skills in C++, exploring core computer science concepts, data structures, and algorithms. I enjoy learning new technologies and understanding the logic behind building efficient and practical solutions.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section class="skills" aria-labelledby="skills-heading">
+    <section id="skills" class="skills" aria-labelledby="skills-heading">
       <h2 id="skills-heading">Skills</h2>
       <ul>
         <li>C++</li>
@@ -36,29 +42,130 @@
       </ul>
     </section>
 
-    <section class="projects" aria-labelledby="projects-heading">
+    <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
-      <ul>
-        <li>
-          <a href="https://PLACEHOLDER-project-one.example.com">PLACEHOLDER: Project One Title</a>
-          <p>PLACEHOLDER: One-sentence description of project one.</p>
+      <div class="project-search">
+        <label class="visually-hidden" for="projectSearch">Search projects</label>
+        <input
+          id="projectSearch"
+          type="search"
+          placeholder="Search projects by title, description, or technology"
+          autocomplete="off"
+          aria-controls="projects-list"
+        />
+      </div>
+      <p id="projectSearchEmpty" class="project-search-empty" hidden aria-live="polite">
+        No projects match your search.
+      </p>
+      <ul id="projects-list" class="projects-list">
+        <li class="project-card" data-technologies="C++ Python">
+          <h3 class="project-title">
+            <a href="https://github.com/Govind966429/factorial-Python-basics-25BCON1126" target="_blank" rel="noopener noreferrer">
+              C++ to Python Program Conversion
+            </a>
+          </h3>
+          <p class="project-description">
+            Three introductory programming exercises rewritten from C++ into Python, covering factorial calculation, Fibonacci series generation, and mapping C++ structures onto Python dictionaries.
+          </p>
+          <p class="project-tech">C++ · Python</p>
+          <p class="project-links">
+            Repositories:
+            <a href="https://github.com/Govind966429/factorial-Python-basics-25BCON1126" target="_blank" rel="noopener noreferrer">Factorial</a>
+            <a href="https://github.com/Govind966429/fibonacci-python-basic-25bcon1126" target="_blank" rel="noopener noreferrer">Fibonacci</a>
+            <a href="https://github.com/Govind966429/struct-to-dict-python-basic-25bcon1126" target="_blank" rel="noopener noreferrer">Struct to Dictionary</a>
+          </p>
         </li>
-        <li>
-          <a href="https://PLACEHOLDER-project-two.example.com">PLACEHOLDER: Project Two Title</a>
-          <p>PLACEHOLDER: One-sentence description of project two.</p>
+        <li class="project-card" data-technologies="Python">
+          <h3 class="project-title">
+            <a href="https://github.com/Govind966429/Buggy__python_25bon1126" target="_blank" rel="noopener noreferrer">
+              Python Debugging and Testing
+            </a>
+          </h3>
+          <p class="project-description">
+            A Python assignment about finding and fixing errors in existing code, with a test file included to confirm that the corrected program behaves as expected.
+          </p>
+          <p class="project-tech">Python</p>
         </li>
-        <li>
-          <a href="https://PLACEHOLDER-project-three.example.com">PLACEHOLDER: Project Three Title</a>
-          <p>PLACEHOLDER: One-sentence description of project three.</p>
+        <li class="project-card" data-technologies="Python">
+          <h3 class="project-title">
+            <a href="https://github.com/Govind966429/Messy_Python_25bcon1126" target="_blank" rel="noopener noreferrer">
+              Python Code Refactoring with Cursor AI
+            </a>
+          </h3>
+          <p class="project-description">
+            A Python project that uses Cursor AI to improve the structure and readability of a messy program, while keeping its original output and intended behavior intact.
+          </p>
+          <p class="project-tech">Python</p>
+        </li>
+        <li class="project-card" data-technologies="HTML CSS JavaScript">
+          <h3 class="project-title">
+            <a href="https://github.com/Govind966429/quiz_25bcon1126" target="_blank" rel="noopener noreferrer">
+              Queez
+            </a>
+          </h3>
+          <p class="project-description">
+            A quiz web project built with HTML, JavaScript, and CSS, with the HTML and JavaScript written independently and Cursor AI used to create the CSS styling.
+          </p>
+          <p class="project-tech">HTML · CSS · JavaScript</p>
+        </li>
+        <li class="project-card" data-technologies="HTML CSS JavaScript">
+          <h3 class="project-title">
+            <a href="https://github.com/Govind966429/My_reading_List" target="_blank" rel="noopener noreferrer">
+              Reading Book App
+            </a>
+          </h3>
+          <p class="project-description">
+            A web app for tracking books you have read and saving reading progress, built with HTML, CSS, and JavaScript.
+          </p>
+          <p class="project-tech">HTML · CSS · JavaScript</p>
         </li>
       </ul>
+    </section>
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email</span>
+          <span>PLACEHOLDER: you@example.com</span>
+        </li>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/Govind966429" target="_blank" rel="noopener noreferrer">Govind966429</a>
+        </li>
+        <li>
+          <span class="contact-label">LinkedIn</span>
+          <span>PLACEHOLDER: Add a LinkedIn URL</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="weather-section" class="weather-section"> 
+      <h2>Live Weather Checker</h2> 
+      <p>Enter a city to check its current weather.</p> 
+      <div class="weather-controls"> 
+      <input id="cityInput" type="text" placeholder="Enter city (e.g., Jaipur)" /> 
+      <button id="weatherButton" type="button">Get Weather</button> 
+      </div> 
+      <p id="weatherResult" aria-live="polite">Enter a city and click Get Weather.</p> 
+      </section>
+
+    <section id="chatbot" class="chatbot-section" aria-labelledby="chatbot-heading">
+      <h2 id="chatbot-heading">Ask this portfolio</h2>
+      <p>Ask about skills, projects, or background.</p>
+      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="Type a question..." autocomplete="off" />
+        <button id="chatSend" type="submit">Send</button>
+      </form>
+      <p id="chatStatus"></p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>PLACEHOLDER: Contact email, e.g. you@example.com</p>
+    <p>Govind saran</p>
   </footer>
-  <button id="themeToggle">Switch to Dark Mode</button>
   <script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
